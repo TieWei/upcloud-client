@@ -33,7 +33,7 @@ module Upyun
       define_method(method) do |path, opts={}|
         with_upyun do
           url = "http://#{@api_endpoint}/#{path}"
-          payload = opts[:payload] || {}
+          payload = opts[:payload]
           headers = opts[:headers] || {}
           if [:post, :put].include? method
             return RestClient.send(method, url, payload, headers)
