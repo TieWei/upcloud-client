@@ -2,8 +2,10 @@ module Upyun
 	module API
 
 		def bucket_usage(bucket)
-			get("#{bucket}/?usage")
+			get("#{bucket}/?usage").to_i
 		end
+
+		alias usage bucket_usage
 
 		def mkdir(bucket, dir, mkpath=false)
 			headers = {'folder' => true, 'mkdir' => mkpath}
