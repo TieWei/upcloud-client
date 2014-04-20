@@ -74,6 +74,7 @@ module Upyun
 
 		alias download get_file
 		alias get_f get_file
+		alias read get_file
 
 		def create(bucket, upload_path, local_file, opts={})
 			headers = {}
