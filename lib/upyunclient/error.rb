@@ -23,7 +23,7 @@ module Upyun::Error
     def initialize(response=nil)
       @response = response
       msg = response.msg + "\n"
-      msg << response.body
+      msg << response.body if response.body
       super(msg)
     end
 
