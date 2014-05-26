@@ -18,7 +18,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Please read through the demo.rb which detailed how to use the client.
 
 ## Contributing
 
