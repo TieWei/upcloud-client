@@ -23,7 +23,7 @@ module Upyun
         config = options[key] || Upyun::Default.send(key)
         configure(key, config)
       end
-      RestClient.log = 'stdout'
+      RestClient.log = @log
       RestClient.add_before_execution_proc do |req, params|
         sign! req
       end

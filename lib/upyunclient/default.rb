@@ -34,6 +34,15 @@ module Upyun
         ENV['UPYUN_PASSWORD']
       end
 
+      def log
+        if ENV['UPYUN_LOG']
+          ENV['RESTCLIENT_LOG'] = ENV['UPYUN_LOG']
+          return ENV['UPYUN_LOG']
+        else
+          return "stdout"
+        end
+      end
+
     end
 
   end

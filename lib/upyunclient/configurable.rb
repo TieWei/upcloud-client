@@ -31,7 +31,8 @@ module Upyun
           :api_isp,
           :auth,
           :username,
-          :password
+          :password,
+          :log
         ]
       end
 
@@ -46,7 +47,7 @@ module Upyun
     end
 
     def configure(key, value)
-      if [:username, :password].include? key
+      if [:username, :password, :log].include? key
         instance_variable_set(:"@#{key}", value)
       elsif key == :auth
         @auth = Upyun::Configurable.auth_header(value)
